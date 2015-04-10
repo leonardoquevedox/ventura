@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+/*Ionic Customization*/
+.item-input-wrapper{
+	background: #fff;
+}
+
+.tabs-icon-top.tabs .tab-item {
+	color: white;
+}
+
+.button-big{
+	border-radius: 50px;
+	font-size: 35px;
+	padding: 3px;
+}
+
+.responsive-image{
+	width: 300px;
+	height: 300px;
+	display: block;
+	margin: auto;
+}
+
+input{
+	text-align: center;
+	margin: 5px;
+}
+
+.list{
+	margin-bottom: 0px;
+}
+
+.button.button-block{
+	margin-top: 5px;
+}

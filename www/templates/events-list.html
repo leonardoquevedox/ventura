@@ -1,0 +1,33 @@
+ <ion-pane>
+  <ion-header-bar class="bar-stable bar-balanced">
+  <h1 class="title">{{eventsType}}</h1>
+</ion-header-bar>
+
+<ion-content>
+<!-- Search bar -->
+  <div class="item-input-inset item-balanced">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Insira o nome do evento aqui" style="width: 100%; text-align: center;">
+    </label>
+    <button class="button button-small button-balanced" ng-click="getEvents()">
+      Encontrar!
+    </button>
+  </div>
+  <div class="list">
+    <a class="item item-thumbnail-left" href="#" ng-repeat="event in events">
+      <img src="img/lemon.png">
+      <h2>{{event.name}}</h2>
+      <p>{{event.place.name}}</p>
+    </a>
+</div>
+
+</ion-content>
+<!-- Footer -->
+<div class="tabs tabs-icon-top tabs-balanced">
+  <a class="tab-item" href="/#/movies"><i class="icon ion-ios-navigate-outline"></i>Eventos</a>
+  <a class="tab-item" href="/#/concerts"><i class="icon ion-ios-film"></i>Cinema</a>
+  <a class="tab-item" href="/#/movies"><i class="icon ion-ios-musical-notes"></i>Shows</a>
+  <a class="tab-item" href="/#/movies"><i class="icon ion-ios-calendar-outline"></i> Geral</a>
+</div>
+
+</ion-pane>
