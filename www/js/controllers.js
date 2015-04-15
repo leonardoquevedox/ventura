@@ -1,24 +1,7 @@
   angular.module('starter.controllers', [])
 
-  .controller('WelcomeCtrl', function($scope, $http, $state, $window) {
+  .controller('WelcomeCtrl', function($scope, $http, $state, $window, $rootScope) {
     $scope.eventsType = 'Eventos';
-
-    console.log('boo haa');
-
-    $scope.goFullScreen = function(){
-     var i = document.getElementsByTagName("body")[0];
-     
-    // go full-screen
-    if (i.requestFullscreen) {
-      i.requestFullscreen();
-    } else if (i.webkitRequestFullscreen) {
-      i.webkitRequestFullscreen();
-    } else if (i.mozRequestFullScreen) {
-      i.mozRequestFullScreen();
-    } else if (i.msRequestFullscreen) {
-      i.msRequestFullscreen();
-    }
-  }
 
   $scope.redirectTo = function(state){
     $window.location.href = '#/'+state;
@@ -45,10 +28,8 @@
       openFB.api({
         path: '/POACultura/events?fields=id,name,description,place,start_time',
         success: function(data) {
-          $scope.events = data.data;
-          console.log($scope.events);
+          $rootScope.events = data.data;
           $scope.$apply();
-          console.log(data);
         },
         error: function(error){
           console.log(error);
