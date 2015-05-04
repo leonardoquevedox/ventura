@@ -14,16 +14,18 @@
 	padding: 3px;
 }
 
-.responsive-image{
-	width: 159px;
-	height: 196px;
-	display: block;
-	margin: auto;
-}
-
 input{
 	text-align: center;
 	margin: 5px;
+}
+
+.city-lights-bg{
+	background: url('../img/porto_alegre.jpg');
+	background-position: center;
+}
+
+.green-bg{
+	background-color: #25FF25;
 }
 
 .list{

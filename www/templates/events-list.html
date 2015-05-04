@@ -15,9 +15,11 @@
   </div>
   <div class="list">
     <a class="item item-thumbnail-left" href="#" ng-repeat="event in events">
-      <img src="img/lemon.png">
-      <h2>{{event.name}}</h2>
-      <p>{{event.place.name}}</p>
+      <img src="img/lemon.png" style="width: 200px; height: 159px;">
+      <h2>{{::event.name}}</h2>
+      <p>{{::event.place.name}}</p>
+      <p>{{::event.place.location.street}}</p>
+      <p>{{::event.place.location.city}}</p>
     </a>
 </div>
 

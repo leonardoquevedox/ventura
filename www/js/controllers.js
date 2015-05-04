@@ -3,9 +3,9 @@
   .controller('WelcomeCtrl', function($scope, $http, $state, $window, $rootScope) {
     $scope.eventsType = 'Eventos';
 
-  $scope.redirectTo = function(state){
-    $window.location.href = '#/'+state;
-  }
+    $scope.redirectTo = function(state){
+      $window.location.href = '#/'+state;
+    }
 
   // Defaults to sessionStorage for storing the Facebook token
   openFB.init({appId: '1453333228291598'});
@@ -26,9 +26,10 @@
 
     $scope.getEvents = function() {
       openFB.api({
-        path: '/POACultura/events?fields=id,name,description,place,start_time',
+        path: '/POACultura/events?fields=id,name,description,place,start_time,cover',
         success: function(data) {
           $rootScope.events = data.data;
+          console.log($rootScope.events);
           $scope.$apply();
         },
         error: function(error){
