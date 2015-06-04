@@ -1,5 +1,46 @@
-<ion-pane class="balanced-bg">
-<ion-content>
+<ion-view hide-nav-bar="true">
+<ion-content class="city-background">
+<div class="list list-inset transparent-background" style="text-align: center;">
+	<!-- LOGO VENTURA LIMÃO -->
+	<div>
+		<div style="display: inline-flex;">
+			<img ng-src="img/icon.png" style="width: 150px; height: 150px; margin: 20px;">
+		</div>
+
+	</div>
+	
+	<div>
+		<h3 style="color: white; margin-top: 20px;">Acesse:</h3>
+		<!-- E-MAIL -->
+		<label class="item item-input with-shadows" style="margin-bottom: 2px;">
+			<input type="text" placeholder="Seu e-mail" style="text-align: center;" ng-model="user.name">
+		</label>
+		<!-- SENHA -->
+		<label class="item item-input">
+			<input type="password" placeholder="Sua senha" style="text-align: center;" ng-model="user.password">
+		</label>
+		<div class="button-pink credentials-button with-shadows yellow-font" ng-click = "redirectTo('#/concerts');" style="float: none; width: 100%; margin-top: 5px;">
+			Acessar
+		</div>
+		<div class="yellow-font" style="margin-bottom: 10px; float: none; width: 100%; margin: 15px 0px 15px 0px;">
+			<h4 style="color: white; margin: 0px;">Acesse também com:</h4>
+			<button class="button icon-only button-light button-social with-shadows ion-social-facebook" ng-click="login()"></button>
+			<button class="button icon-only button-light button-social with-shadows ion-social-googleplus-outline"></button>
+			<button class="button icon-only button-light button-social with-shadows ion-social-twitter"></button>
+		</div>
+	</div>
+
+	<div style="text-align: center;">
+		<div class="button-pink credentials-button with-shadows yellow-font">
+			Cadastre-se
+		</div>
+		<div class="button-pink credentials-button with-shadows yellow-font" style="font-size: 12px;">
+			Esqueci minha senha
+		</div>
+
+	</div>
+
+</div>
 
 </ion-content>
-</ion-pane>
+</ion-view>

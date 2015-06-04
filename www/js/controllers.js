@@ -1,11 +1,7 @@
-  angular.module('starter.controllers', [])
 
-  .controller('WelcomeCtrl', function($scope, $http, $state, $window, $rootScope) {
-    $scope.eventsType = 'Eventos';
+starter.controller('WelcomeCtrl', function($scope, $http, $state, $window, $rootScope) {
 
-    $scope.redirectTo = function(state){
-      $window.location.href = '#/'+state;
-    }
+  $scope.eventsType = 'Eventos';
 
   // Defaults to sessionStorage for storing the Facebook token
   openFB.init({appId: '1453333228291598'});
@@ -14,29 +10,11 @@
     //  openFB.init({appId: 'YOUR_FB_APP_ID', tokenStore: window.localStorage});
 
     $scope.login = function() {
-      openFB.login(
-        function(response) {
-          if(response.status === 'connected') {
-            alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
-          } else {
-            alert('Facebook login failed: ' + response.error);
-          }
-        }, {scope: 'email,read_stream,publish_stream'});
+      openFB.login(function(data){
+        console.log(data);
+      }, {scope: 'email,read_stream,publish_actions'});
     }
 
-    $scope.getEvents = function() {
-      openFB.api({
-        path: '/POACultura/events?fields=id,name,description,place,start_time,cover',
-        success: function(data) {
-          $rootScope.events = data.data;
-          console.log($rootScope.events);
-          $scope.$apply();
-        },
-        error: function(error){
-          console.log(error);
-        }
-      });
-    }
 
     $scope.revokePermissions = function(){
       openFB.revokePermissions(
@@ -50,8 +28,16 @@
 
   })
 
-  
-  .controller('mainController', function($scope, $http) {
-    $scope.eventsType = 'Shows';
 
+.controller('mainController', function($scope, $http, $rootScope, eventsService) {
+  $scope.eventsType = 'Shows';
+
+  $scope.$on('$ionicView.enter', function() {
+    console.log($rootScope.events);
   })
+
+  $scope.getEvents = function() {
+    eventsService.getEventsList($scope)
+  }
+
+})

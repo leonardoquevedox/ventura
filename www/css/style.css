@@ -1,7 +1,65 @@
 /* Empty. Add your own CSS if you like */
+
+#map-canvas {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	bottom: 6px;
+}
+
+.scroll{
+	height: 100%;
+}
+
+.target-button{
+	border-radius: 5px;
+	color: #4F92FF;
+	bottom: 0px;
+}
+
 /*Ionic Customization*/
+
+.loading{
+	background-color: rgba(0,0,0,0.0) !important;
+}
+
+/* Ionic Spinner */
+.spinner svg {
+	width: 50px;
+	height: 50px;
+	stroke: #ED4565;;
+	fill: #FF0131;;
+}
+
+/* Ionic Alert */
+.popup-head{
+	background-color: #F00C40;
+	text-align: center;
+	border-radius: 2px 2px 0px 0px;
+}
+
+.popup-title{
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.popup-container .popup{
+	border-radius: 2px;
+}
+
+.popup-body{
+	text-align: center;
+	color: #FF0131;
+	font-weight: bold;
+}
+
 .item-input-wrapper{
 	background: #fff;
+}
+
+.item-gray{
+	background-color: #E9E5DC;
 }
 
 .tabs-icon-top.tabs .tab-item {
@@ -19,19 +77,87 @@ input{
 	margin: 5px;
 }
 
-.city-lights-bg{
-	background: url('../img/porto_alegre.jpg');
-	background-position: center;
-}
-
-.green-bg{
-	background-color: #25FF25;
-}
-
 .list{
 	margin-bottom: 0px;
 }
 
 .button.button-block{
 	margin-top: 5px;
+}
+
+.pink-font{
+	color: #ED4565;
+}
+
+.button-pink{
+	background-color: #FF0131;
+	color: white;
+	border: 1px solid #F40038;
+}
+
+input[type="text"]{
+	color: #888;
+}
+
+input[type="password"]{
+	color: #888;
+}
+
+.button-pink:hover{
+	color: white;
+}
+
+.city-background{
+	background-color: #F00C40;
+/*	background: url('../img/porto_alegre.jpg');
+	background-position: center;*/
+}
+
+.yellow-font{
+	color: #FFF;
+	font-weight: 300;
+}
+
+.transparent-background{
+	background-color: rgba(0,0,0,0);
+}
+
+.credentials-button{
+	padding: 10px;
+	float: right;
+	margin-right: 2%;
+	width: 48%;
+}
+
+.button.button-social{
+	background-color: white;
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+	min-height: 40px;
+	min-width: 40px;
+	padding: 0px;
+	color: #E91E63;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.transparent-white-layer{
+	background-color: #DB2C54;
+	border-radius: 3px;
+}
+
+.with-shadows{
+	-webkit-box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
+	-moz-box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
+	box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
+}
+
+.event-title{
+	font-weight: bold!important;
+	color: #F01B4C;
+}
+
+.event-description{
+	color: #77515A!important;
 }

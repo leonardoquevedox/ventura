@@ -1,9 +1,8 @@
 <html>
 <body>
-You can now close this window
-<script src="js/openfb.js"></script>
 <script>
-    openFB.oauthCallback(window.location.href);
+    window.opener.openFB.oauthCallback(window.location.href);
+    window.close();
 </script>
 </body>
 </html>
