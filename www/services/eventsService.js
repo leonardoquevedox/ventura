@@ -1,10 +1,29 @@
 starter.service('eventsService', function($http, spinnerService, $rootScope, alertService) {
 	var _self = this;
 
+	this.getEventDetails = function(eventId, callback){
+		spinnerService.showSpinner();
+		var eventPath = "/"+eventId;
+		openFB.api({
+			path: eventPath,
+			params: {
+				'fields':'id,name,description,place,start_time,cover'
+			},
+			success: function(eventDetails) {
+				spinnerService.hideSpinner();
+				if(callback)
+					callback(eventDetails);
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	}
+
+
 	this.getEventsList = function($scope, callback){
 		spinnerService.showSpinner();
 		openFB.api({
-
 			path: '/events/attending',
 			params: {
 				'ids': '189410864517242,171220726312631,210624832323354,114073091977375',

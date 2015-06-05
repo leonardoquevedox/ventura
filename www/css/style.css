@@ -60,6 +60,7 @@
 
 .item-gray{
 	background-color: #E9E5DC;
+	padding: 5px 5px 10px 5px;
 }
 
 .tabs-icon-top.tabs .tab-item {
@@ -90,7 +91,7 @@ input{
 }
 
 .button-pink{
-	background-color: #FF0131;
+	background-color: #E81445;
 	color: white;
 	border: 1px solid #F40038;
 }
@@ -109,8 +110,12 @@ input[type="password"]{
 
 .city-background{
 	background-color: #F00C40;
+/*	background: linear-gradient(rgb(232, 20, 68), rgba(255, 192, 29, 1));
+	background: -webkit-linear-gradient(rgb(232, 20, 68), rgba(255, 192, 29, 1));
+	background: -o-linear-gradient(rgb(232, 20, 68), rgba(255, 192, 29, 1));
+	background: -moz-linear-gradient(rgb(232, 20, 68), rgba(255, 192, 29, 1));*/
 /*	background: url('../img/porto_alegre.jpg');
-	background-position: center;*/
+background-position: center;*/
 }
 
 .yellow-font{
@@ -125,8 +130,9 @@ input[type="password"]{
 .credentials-button{
 	padding: 10px;
 	float: right;
-	margin-right: 2%;
+	margin-right: 2px;
 	width: 48%;
+	margin-left: 2px;
 }
 
 .button.button-social{
@@ -153,6 +159,10 @@ input[type="password"]{
 	box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
 }
 
+.content-box{
+	padding: 10px;
+}
+
 .event-title{
 	font-weight: bold!important;
 	color: #F01B4C;
@@ -160,4 +170,16 @@ input[type="password"]{
 
 .event-description{
 	color: #77515A!important;
+}
+
+.event-details-description{
+	color: #FF0044;
+}
+
+.facebook-label{
+	margin-right: 25px;
+}
+
+.blue-facebook-button{
+	background-color: #4D68A2;
 }

@@ -9,7 +9,7 @@ starter.service('mapsService', function($rootScope, $http, spinnerService, alert
 
 		var mapOptions = {
 			disableDefaultUI: true,
-			zoom: 16,
+			zoom: 12,
 			panControl: false,
 			zoomControl: false,
 			mapTypeControl: false,
@@ -163,7 +163,7 @@ starter.service('mapsService', function($rootScope, $http, spinnerService, alert
 
 
 		google.maps.event.addListener(marker, 'click', function() {
-			alertService.alert(event.name);
+			$rootScope.redirectTo('#/event-details/'+event.id);
 		});
 		if(event)
 			event.googleMapsMarker = marker;

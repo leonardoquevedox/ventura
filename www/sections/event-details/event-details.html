@@ -1,0 +1,24 @@
+ <ion-pane>
+ <ion-header-bar class="bar-stable bar-balanced">
+ <h1 class="title">{{eventsType}}</h1>
+</ion-header-bar>
+
+<ion-content class="has-header has-footer">
+
+<div style="text-align: center;">
+<img ng-src="{{event.cover.source}}" style="width: 100%; max-width: 700px;">
+</div>
+
+<div class="content-box">
+	<h3 class="event-title" style="text-align: center;">
+		{{event.name}}
+	</h3>
+	<div class="event-details-description">
+		{{event.description}}
+	</div>
+</div>
+
+</ion-content>
+<!-- Footer -->
+<div ng-include="'sections/components/footer.html'"></div>
+</ion-pane>

@@ -1,12 +1,16 @@
 starter.factory('alertService', function($ionicPopup) {
 	return {
-		alert: function(message){
-			if(message !== null && message.length > 0){
+		alert: function(message, callback){
+			var messageIsNotEmpty = message !== null && message.length > 0;
+			if(messageIsNotEmpty){
 				var alertPopup = $ionicPopup.alert({
 					title: 'Alerta!',
 					template: '<p>'+message+'</p>',
 					okType: 'button-balanced', // String (default: 'button-positive'). The type of the OK button.
 				})
+				if(callback){
+					alertPopup.then(callback);
+				}
 			}
 			else{
 				var alertPopup = $ionicPopup.alert({
