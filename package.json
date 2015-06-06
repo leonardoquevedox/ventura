@@ -22,6 +22,7 @@
     "org.apache.cordova.geolocation"
   ],
   "cordovaPlatforms": [
-    "android"
+    "android",
+    "ios"
   ]
 }

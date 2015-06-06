@@ -15,7 +15,7 @@
 </div>
 <div class="list">
 <a class="item item-thumbnail-left" href="#" ng-repeat="event in events | filter:search" ng-click="redirectToEventDetails(event.id)">
-    <img src="img/icon.png" style="width: 200px; height: 159px; margin-top: 10px;">
+    <img src="img/event_icon.png" style="width: 200px; height: 159px; margin-top: 10px;">
     <h2 class="event-title">{{::event.name}}</h2>
     <p class="event-description"><i class="pink-font ion-ios-calendar-outline"></i> {{::event.formatedDate}}</p>
     <p class="event-description"><i class="pink-font ion-ios-location"></i> {{::event.place.location.city}}</p>

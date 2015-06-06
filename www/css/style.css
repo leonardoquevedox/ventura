@@ -86,15 +86,6 @@ input{
 	margin-top: 5px;
 }
 
-.pink-font{
-	color: #ED4565;
-}
-
-.button-pink{
-	background-color: #E81445;
-	color: white;
-	border: 1px solid #F40038;
-}
 
 input[type="text"]{
 	color: #888;
@@ -129,10 +120,6 @@ background-position: center;*/
 
 .credentials-button{
 	padding: 10px;
-	float: right;
-	margin-right: 2px;
-	width: 48%;
-	margin-left: 2px;
 }
 
 .button.button-social{
@@ -182,4 +169,15 @@ background-position: center;*/
 
 .blue-facebook-button{
 	background-color: #4D68A2;
+	color: #FFF;
+}
+
+.pink-font{
+	color: #ED4565;
+}
+
+.button-pink{
+	background-color: rgba(255,90,0,0.3);
+	color: white;
+	border: 1px solid #F40038;
 }
