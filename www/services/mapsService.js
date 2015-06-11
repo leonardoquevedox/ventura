@@ -20,6 +20,7 @@ starter.service('mapsService', function($rootScope, $http, spinnerService, alert
 		}
 
 		$rootScope.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		console.log($rootScope.map);
 
 		google.maps.event.addListener($rootScope.map, "dragend", function(event) {
 			_self.refreshMap();

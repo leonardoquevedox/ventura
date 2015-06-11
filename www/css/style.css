@@ -160,6 +160,7 @@ background-position: center;*/
 }
 
 .event-details-description{
+	font-size: 12px;
 	color: #FF0044;
 }
 
@@ -180,4 +181,44 @@ background-position: center;*/
 	background-color: rgba(255,90,0,0.3);
 	color: white;
 	border: 1px solid #F40038;
+}
+
+.link{
+	color: #F00C40;
+}
+
+.half-width{
+	width: 48%;
+	text-align: justify;
+}
+
+.banner{
+	text-align: center;
+	height: 180px;
+	width: 100%;
+	background-position: center;
+}
+
+.description-question{
+	color: #F00C40;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+}
+
+.description-answer{
+	text-align: center;
+}
+
+
+.friend{
+	width: 20%;
+	max-height: 70px;
+	float: left;
+	margin: 5px;
+	min-width: 50px;
+}
+
+.friend-avatar{
+	border-radius: 4px;
 }

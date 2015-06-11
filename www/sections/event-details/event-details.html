@@ -5,17 +5,55 @@
 
 <ion-content class="has-header has-footer">
 
-<div style="text-align: center;">
-<img ng-src="{{event.cover.source}}" style="width: 100%; max-width: 700px;">
+<div class="banner" style="background: url('{{event.cover.source}}')">
 </div>
 
 <div class="content-box">
-	<h3 class="event-title" style="text-align: center;">
+
+	<!-- Event title -->
+	<h4 class="event-title" style="text-align: center;">
 		{{event.name}}
-	</h3>
-	<div class="event-details-description">
-		{{event.description}}
+	</h4>
+
+	<!-- Event description -->
+	<div class="event-details-description half-width" style="float: left; border-right: 1px solid #efefef; padding-right: 10px;">
+		<div class="description-question" ng-if="event.formatedDate">What?</div>
+		{{event.description|limitTo: textLength}}<br>
+		<a href="" ng-click="readMore()" ng-if="textLength === SHORT_TEXT" class="event-description">...read more</a>
+		<a href="" ng-click="readLess()" ng-if="textLength === LARGE_TEXT" class="event-description">read less</a>
 	</div>
+
+	<!-- Event general info -->
+	<div class="event-details-description half-width" style="float: right; margin-left: 10px;">
+
+		<!-- Event date -->
+		<div ng-if="event.formatedDate">
+			<div class="description-question">Quando?</div>
+			<div class="description-answer">
+				<i class="pink-font ion-ios-calendar-outline"></i> {{event.formatedDate}}
+			</div>
+		</div>
+		
+
+		<!-- Event place -->
+		<div ng-if="event.formatedDate">
+			<div class="description-question">Aonde?</div>
+			<div class="description-answer">
+				<i class="pink-font ion-ios-location"></i> {{::event.place.location.street}}
+			</div>
+		</div>
+		
+
+		<!-- Friends Attending -->
+		<div class="description-question" ng-if="event.formatedDate">Quem vai?</div>
+		<div>
+			<div ng-repeat="friend in event.friendsAttending" class="friend">
+				<img ng-src="{{friend.picture.data.url}}" class="friend-avatar">
+				<div>{{friend.name.split(" ")[0]|limitTo:10}}</div>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 </ion-content>

@@ -7,14 +7,14 @@
 <!-- Search bar -->
 <div class="item-input-inset item-balanced">
   <label class="item-input-wrapper">
-    <input type="text" placeholder="Filtre pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;">
+    <input type="text" placeholder="Filtre pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;" ng-model="keyword">
   </label>
   <button class="button button-small button-balanced" ng-model="search.name" ng-click="getEvents()">
     Encontrar!
   </button>
 </div>
 <div class="list">
-<a class="item item-thumbnail-left" href="#" ng-repeat="event in events | filter:search" ng-click="redirectToEventDetails(event.id)">
+<a class="item item-thumbnail-left" href="#" ng-repeat="event in events | orderBy:'-date':true | filter: keyword" ng-click="redirectToEventDetails(event.id)">
     <img src="img/event_icon.png" style="width: 200px; height: 159px; margin-top: 10px;">
     <h2 class="event-title">{{::event.name}}</h2>
     <p class="event-description"><i class="pink-font ion-ios-calendar-outline"></i> {{::event.formatedDate}}</p>

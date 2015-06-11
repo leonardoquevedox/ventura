@@ -14,17 +14,19 @@ starter.service('facebookService', function(spinnerService, $rootScope, alertSer
     		}, {scope: 'email,read_stream,publish_stream'});
     },
 
-    this.getUserInfo = function() {
-    	openFB.api({
-    		path: '/me?fields=id,name,cover',
-    		success: function(data) {
-    			alertService.alert("Olá, "+(data.name.split(" ")[0])+"!"); 
-    			$rootScope.user = data;
-    		},
-    		error: function(error){
-    			console.log(error);
-    		}
-    	});
+     this.getUserInfo = function(callback) {
+        openFB.api({
+            path: '/me',
+            success: function(data) {
+                alertService.alert("Olá, "+data.name+"!"); 
+                $rootScope.user = data;
+                if(callback)
+                    callback(data);
+            },
+            error: function(error){
+                console.log(error);
+            }
+        });
     },
 
     this.revokePermissions = function(){
