@@ -18,7 +18,7 @@ starter.service('facebookService', function(spinnerService, $rootScope, alertSer
         openFB.api({
             path: '/me',
             success: function(data) {
-                alertService.alert("Olá, "+data.name+"!"); 
+                // alertService.alert("Olá, "+data.name+"!"); 
                 $rootScope.user = data;
                 if(callback)
                     callback(data);

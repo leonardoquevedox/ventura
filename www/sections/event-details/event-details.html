@@ -1,11 +1,10 @@
  <ion-pane>
  <ion-header-bar class="bar-stable bar-balanced">
- <h1 class="title">{{eventsType}}</h1>
+ <h1 class="title">O Evento</h1>
 </ion-header-bar>
 
 <ion-content class="has-header has-footer">
-
-<div class="banner" style="background: url('{{event.cover.source}}')">
+<div class="banner" style="background: url('{{event.cover.source}}'); background-position: center;">
 </div>
 
 <div class="content-box">
@@ -16,40 +15,39 @@
 	</h4>
 
 	<!-- Event description -->
-	<div class="event-details-description half-width" style="float: left; border-right: 1px solid #efefef; padding-right: 10px;">
-		<div class="description-question" ng-if="event.formatedDate">What?</div>
-		{{event.description|limitTo: textLength}}<br>
-		<a href="" ng-click="readMore()" ng-if="textLength === SHORT_TEXT" class="event-description">...read more</a>
-		<a href="" ng-click="readLess()" ng-if="textLength === LARGE_TEXT" class="event-description">read less</a>
+	<div class="event-details-description" style="border-right: 1px solid #efefef; padding-right: 10px;">
+		<div class="description-question" ng-if="event.formatedDate">O quê mesmo?</div>
+		{{event.description|limitTo: textLength}}
+		<a href="" ng-click="readMore()" ng-if="textLength === SHORT_TEXT" class="event-description">...ler mais</a>
+		<!-- <a href="" ng-click="readLess()" ng-if="textLength === LARGE_TEXT" class="event-description">read less</a> -->
 	</div>
-
 	<!-- Event general info -->
-	<div class="event-details-description half-width" style="float: right; margin-left: 10px;">
+	<div class="event-details-description">
 
 		<!-- Event date -->
 		<div ng-if="event.formatedDate">
 			<div class="description-question">Quando?</div>
 			<div class="description-answer">
-				<i class="pink-font ion-ios-calendar-outline"></i> {{event.formatedDate}}
+				<i class="pink-font ion-ios-calendar-outline"></i> Rolará {{event.formatedDate}}
 			</div>
 		</div>
 		
 
 		<!-- Event place -->
-		<div ng-if="event.formatedDate">
+		<div ng-if="event.formatedDate" div ng-if="event.place.location.street || event.place.name">
 			<div class="description-question">Aonde?</div>
 			<div class="description-answer">
-				<i class="pink-font ion-ios-location"></i> {{::event.place.location.street}}
-			</div>
-		</div>
-		
+				<!-- EVENT ADDRESS -->
+				<div ng-if="event.place.location.street">
+					<i class="pink-font ion-ios-location"></i> 
+					Ali na {{ ::event.place.location.street }}
+				</div>
 
-		<!-- Friends Attending -->
-		<div class="description-question" ng-if="event.formatedDate">Quem vai?</div>
-		<div>
-			<div ng-repeat="friend in event.friendsAttending" class="friend">
-				<img ng-src="{{friend.picture.data.url}}" class="friend-avatar">
-				<div>{{friend.name.split(" ")[0]|limitTo:10}}</div>
+				<!-- EVENT PLACE NAME -->
+				<div ng-if="event.place.name && !event.place.location.street">
+					<i class="pink-font ion-ios-location"></i> 
+					{{ ::event.place.name }}
+				</div>
 			</div>
 		</div>
 	</div>

@@ -23,6 +23,10 @@
 	background-color: rgba(0,0,0,0.0) !important;
 }
 
+.item-thumbnail-left{
+	min-height: 133px;
+}
+
 /* Ionic Spinner */
 .spinner svg {
 	width: 50px;
@@ -100,13 +104,10 @@ input[type="password"]{
 }
 
 .city-background{
-	background-color: #F00C40;
-/*	background: linear-gradient(rgb(232, 20, 68), rgba(255, 192, 29, 1));
-	background: -webkit-linear-gradient(rgb(232, 20, 68), rgba(255, 192, 29, 1));
-	background: -o-linear-gradient(rgb(232, 20, 68), rgba(255, 192, 29, 1));
-	background: -moz-linear-gradient(rgb(232, 20, 68), rgba(255, 192, 29, 1));*/
-/*	background: url('../img/porto_alegre.jpg');
-background-position: center;*/
+	/*background-color: #F00C40;*/
+	background: url('../img/porto_alegre.old.jpg');
+	background: url('http://imagesdie.com/wp-content/uploads/2014/12/retro-autumn-hd-desktop-wallpaper-high-definition-fullscreen-abstract-computer-photo-vintage-wallpaper.jpg');
+	background-position: center;
 }
 
 .yellow-font{
@@ -120,6 +121,8 @@ background-position: center;*/
 
 .credentials-button{
 	padding: 10px;
+	margin: 2px;
+	margin-top: 0px;
 }
 
 .button.button-social{
@@ -169,8 +172,9 @@ background-position: center;*/
 }
 
 .blue-facebook-button{
-	background-color: #4D68A2;
+	background-color: rgba(58, 87, 149, 0.9);
 	color: #FFF;
+	/*border: 1px solid #133783;*/
 }
 
 .pink-font{
@@ -178,9 +182,9 @@ background-position: center;*/
 }
 
 .button-pink{
-	background-color: rgba(255,90,0,0.3);
+	background-color: rgba(255, 13, 13, 0.9);
 	color: white;
-	border: 1px solid #F40038;
+	border: 1px solid rgba(255, 221, 229, 0.06);
 }
 
 .link{
