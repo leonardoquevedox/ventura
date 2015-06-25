@@ -106,7 +106,7 @@ input[type="password"]{
 .city-background{
 	/*background-color: #F00C40;*/
 	background: url('../img/porto_alegre.old.jpg');
-	background: url('http://imagesdie.com/wp-content/uploads/2014/12/retro-autumn-hd-desktop-wallpaper-high-definition-fullscreen-abstract-computer-photo-vintage-wallpaper.jpg');
+	background: url('../img/city-wallpaper.jpg');
 	background-position: center;
 }
 
@@ -182,7 +182,7 @@ input[type="password"]{
 }
 
 .button-pink{
-	background-color: rgba(255, 13, 13, 0.9);
+	background-color: rgba(245, 9, 54, 0.9);
 	color: white;
 	border: 1px solid rgba(255, 221, 229, 0.06);
 }

@@ -9,7 +9,7 @@ starter.service('mapsService', function($rootScope, $http, spinnerService, alert
 
 		var mapOptions = {
 			disableDefaultUI: true,
-			zoom: 12,
+			zoom: 14,
 			panControl: false,
 			zoomControl: false,
 			mapTypeControl: false,
@@ -110,7 +110,7 @@ starter.service('mapsService', function($rootScope, $http, spinnerService, alert
 	},
 
 	this.getEventCoordinates = function(event){
-		if(!event.place)
+		if(!angular.isDefined(event.place.location))
 			return;
 		var pos = new google.maps.LatLng(event.place.location.latitude, event.place.location.longitude);
 		return pos;

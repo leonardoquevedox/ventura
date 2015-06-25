@@ -72,14 +72,8 @@
         controller: 'eventsMapCtrl'
       })
 
-      .state('movies', {
-        url: "/movies",
-        templateUrl: "sections/events-list/events-list.html",
-        controller: 'eventsListCtrl'
-      })
-
-      .state('concerts', {
-        url: "/concerts",
+      .state('events', {
+        url: "/events",
         templateUrl: "sections/events-list/events-list.html",
         controller: 'eventsListCtrl'
       })

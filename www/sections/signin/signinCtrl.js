@@ -9,7 +9,7 @@ starter.controller('signinCtrl', function($scope, $http, $state, $window, $rootS
     .then(function(data){
       facebookService.getUserInfo(function(userData){
         window.localStorage['VENTURA_USER'] = userData.id;
-        $rootScope.redirectTo('#/concerts');
+        $rootScope.redirectTo('#/events');
       })
     })
   }
