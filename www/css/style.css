@@ -105,9 +105,8 @@ input[type="password"]{
 
 .city-background{
 	/*background-color: #F00C40;*/
-	background: url('../img/porto_alegre.old.jpg');
 	background: url('../img/city-wallpaper.jpg');
-	background-position: center;
+	background-position: 1445px;
 }
 
 .yellow-font{

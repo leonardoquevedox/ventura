@@ -2,6 +2,28 @@
 
 		var _self = this;
 
+		this.searchForEventByName = function(keyword, callback){
+			spinnerService.showSpinner();
+			var queryPath = "/search";
+			openFB.api({
+				path: eventPath,
+				params: {
+					'fields': 'id,name,description,place,start_time,cover',
+					'type': 'event',
+					'q': keyword,
+					'center': '-30.041778,-51.220882',
+					'distance': '30000'
+				},
+				success: function(events) {
+					console.log(events);
+					if(callback)
+						callback(events);
+				},
+				error: function(error){
+					console.log(error);
+				}
+			});
+		}
 
 		this.getEventDetails = function(eventId, callback){
 			spinnerService.showSpinner();
@@ -73,7 +95,7 @@
 				$rootScope.events.push(eventInfo);
 
 			if(!eventIsAfterToday)
-			keepGoing = false;
+				keepGoing = false;
 
 		})
 
@@ -96,6 +118,8 @@
 			console.log(error);
 		})
 	}
+
+
 
 	function getFormatedDate(date){
 		var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
