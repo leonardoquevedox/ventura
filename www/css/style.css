@@ -92,11 +92,11 @@ input{
 
 
 input[type="text"]{
-	color: #888;
+	color: #F00C40;
 }
 
 input[type="password"]{
-	color: #888;
+	color: #F00C40;
 }
 
 .button-pink:hover{
