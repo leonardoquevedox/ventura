@@ -4,7 +4,7 @@
 </ion-header-bar>
 
 <ion-content class="has-header has-footer">
-<div class="banner" style="background: url('/img/city-wallpaper.jpg'); background-position: center;">
+<div class="banner" style="background: url('./img/city-wallpaper.jpg'); background-position: center;">
 </div>
 
 <div class="content-box">
@@ -15,7 +15,7 @@
 	</h4>
 
 	<!-- Event description -->
-	<div class="event-details-description" style="border-right: 1px solid #efefef; padding-right: 10px;">
+	<div class="event-details-description" style="border-right: 1px solid #efefef; padding-right: 10px; text-align: justify;">
 		<div class="description-question" ng-if="event.formatedDate">O quê mesmo?</div>
 		{{event.description|limitTo: textLength}}
 		<a href="" ng-click="readMore()" ng-if="textLength === SHORT_TEXT" class="event-description">...ler mais</a>
