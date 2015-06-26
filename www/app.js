@@ -27,7 +27,7 @@
 
     starter.run(function($ionicPlatform, $rootScope) {
 
-    $rootScope.events = [];
+      $rootScope.events = [];
 
     // Get the current date and seven days from now in order to show the whole week's events
     $rootScope.currentDate = new Date();
@@ -65,6 +65,12 @@
     starter.config(function($stateProvider, $urlRouterProvider) {
 
       $stateProvider
+
+      .state('about', {
+        url: "/about",
+        templateUrl: "sections/about/about.html",
+        controller: 'aboutCtrl'
+      })
 
       .state('culture-map', {
         url: "/cultureMap",

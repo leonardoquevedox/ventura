@@ -225,3 +225,9 @@ input[type="password"]{
 .friend-avatar{
 	border-radius: 4px;
 }
+
+.about-text{
+	padding: 15px;
+	color: #F00C40;
+	text-align: justify;
+}
