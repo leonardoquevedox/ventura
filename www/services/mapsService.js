@@ -9,7 +9,7 @@ starter.service('mapsService', function($rootScope, $http, spinnerService, alert
 
 		var mapOptions = {
 			disableDefaultUI: true,
-			zoom: 14,
+			zoom: 9,
 			panControl: false,
 			zoomControl: false,
 			mapTypeControl: false,

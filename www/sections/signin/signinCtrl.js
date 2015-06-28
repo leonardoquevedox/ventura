@@ -1,4 +1,4 @@
-starter.controller('signinCtrl', function ($scope, $http, $state, $window, $rootScope, alertService, ngFB, facebookService) {
+starter.controller('signinCtrl', function ($scope, $http, $state, $window, $rootScope, alertService, ngFB, facebookService, httpService) {
 
     // Defaults to sessionStorage for storing the Facebook token
     ngFB.init({
@@ -15,6 +15,18 @@ starter.controller('signinCtrl', function ($scope, $http, $state, $window, $root
                     $rootScope.redirectTo('#/events');
                 })
             })
+    }
+
+    $scope.signin = function () {
+        httpService.authenticateUser($scope.user, 'signin', function () {
+            $rootScope.redirectTo('#/events');
+        });
+    }
+
+    $rootScope.signup = function () {
+        httpService.authenticateUser($scope.user, 'signup', function () {
+            $rootScope.redirectTo('#/events');
+        });
     }
 
 
