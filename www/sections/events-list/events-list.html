@@ -14,7 +14,7 @@
   </button> -->
 </div>
 <div class="list">
-  <a class="item item-thumbnail-left" href="#" ng-repeat="event in events | orderBy:'-date':true | filter: keyword" ng-click="redirectToEventDetails(event.id)">
+  <a class="item item-thumbnail-left" href="#" ng-repeat="event in events | orderBy:'-date':true | filter: keyword" ng-click="redirectToEventDetails(event.id)" ng-if="event.name">
     <img src="img/event_icon.png" style="width: 200px; height: 159px; margin-top: 10px;">
     <h2 class="event-title">{{::event.name}}</h2>
     <p class="event-description" ng-if="event.formatedDate">

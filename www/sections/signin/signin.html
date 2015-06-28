@@ -7,7 +7,6 @@
 			<img ng-src="img/event_icon.png" style="width: 150px; height: 150px; opacity: 0.9;">
 			<img ng-src="img/slogan.png" style="width: 200px; height: 45px;">
 		</div>
-
 	</div>
 	
 	<div>
@@ -20,7 +19,7 @@
 		<label class="item item-input" style="margin: 2px;">
 			<input type="password" placeholder="Sua senha" style="text-align: center;" ng-model="user.password">
 		</label>
-		<div class="button-pink credentials-button with-shadows" ng-click = "redirectTo('#/concerts');" style="margin-top: 10px; margin-bottom: 10px;">
+		<div class="button-pink credentials-button with-shadows" ng-click = "redirectTo('#/events');" style="margin-top: 10px; margin-bottom: 10px;">
 			Acessar
 		</div>
 		<div class="blue-facebook-button credentials-button with-shadows" ng-click = "facebookLogin();" style="margin-top: 5px;">
@@ -30,7 +29,7 @@
 			<div class="button-pink credentials-button with-shadows col" style="font-size: 12px;">
 				Esqueci minha senha
 			</div>
-			<div class="button-pink credentials-button with-shadows col">
+			<div class="button-pink credentials-button with-shadows col"  ng-click = "redirectTo('#/signup');">
 				Cadastre-se
 			</div>
 		</div>

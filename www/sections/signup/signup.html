@@ -1,35 +1,35 @@
 <ion-view hide-nav-bar="true">
-<ion-content class="city-background">
-<div class="list list-inset transparent-background" style="text-align: center;">
-	<!-- LOGO VENTURA LIMÃO -->
-	<div>
-		<div style="display: inline-flex;">
-			<img ng-src="img/icon.png" style="width: 150px; height: 150px; margin: 20px;">
-		</div>
+    <ion-content class="city-background">
+        <div class="list list-inset transparent-background" style="text-align: center;">
+            <!-- LOGO VENTURA LIMÃO -->
+            <div>
+                <div>
+                    <img ng-src="img/event_icon.png" style="width: 150px; height: 150px; opacity: 0.9;">
+                    <img ng-src="img/slogan.png" style="width: 200px; height: 45px;">
+                </div>
+            </div>
 
-	</div>
-	
-	<div>
-		<h3 style="color: white; margin-top: 20px;">Cadastr-se:</h3>
-		<!-- E-MAIL -->
-		<label class="item item-input with-shadows" style="margin-bottom: 2px;">
-			<input type="text" placeholder="Seu e-mail" style="text-align: center;" ng-model="user.name">
-		</label>
-		<!-- SENHA -->
-		<label class="item item-input" style="margin-bottom: 2px;">
-			<input type="password" placeholder="Sua senha" style="text-align: center;" ng-model="user.password">
-		</label>
-		<!-- CONFIRMAÇÃO DE SENHA -->
-		<label class="item item-input">
-			<input type="password" placeholder="Sua senha" style="text-align: center;" ng-model="user.password">
-		</label>
-		<!-- SUBMIT -->
-		<div class="transparent-white-layer credentials-button with-shadows yellow-font" ng-click = "redirectTo('#/signin');" style="float: none; width: 100%; margin-top: 5px;">
-			Cadastrar
-		</div>
-	</div>
+            <div>
+                <h3 style="color: white; margin-top: 20px;">Cadastre-se:</h3>
+                <!-- E-MAIL -->
+                <label class="item item-input with-shadows" style="margin-bottom: 2px;">
+                    <input type="text" placeholder="Seu e-mail" style="text-align: center;" ng-model="user.name">
+                </label>
+                <!-- SENHA -->
+                <label class="item item-input" style="margin-bottom: 2px;">
+                    <input type="password" placeholder="Sua senha" style="text-align: center;" ng-model="user.password">
+                </label>
+                <!-- CONFIRMAÇÃO DE SENHA -->
+                <label class="item item-input">
+                    <input type="password" placeholder="Sua senha" style="text-align: center;" ng-model="user.password">
+                </label>
+                <!-- SUBMIT -->
+                <div class="button-pink credentials-button with-shadows" ng-click = "redirectTo('#/signin');" style="margin-top: 10px; margin-bottom: 10px;">
+                    Cadastrar
+                </div>
+            </div>
 
-</div>
+        </div>
 
-</ion-content>
+    </ion-content>
 </ion-view>
