@@ -1,14 +1,12 @@
-starter.service('httpService', function ($http, spinnerService, $rootScope, alertService) {
-    var SERVER_ADDRESS = 'http://breadsyserver-breadsy.rhcloud.com';
-    // var SERVER_ADDRESS = 'http://127.0.0.1:8080';
+starter.service('httpService', function ($http, spinnerService, $rootScope, alertService, constantsService) {
     var _self = this;
 
     // USER METHODS
     this.authenticateUser = function (user, authenticationType, callback) {
         spinnerService.showSpinner();
-
-        $http.post(SERVER_ADDRESS + '/user/' + authenticationType, user)
+        $http.post(constantsService.SERVER_ADDRESS + '/user/' + authenticationType, user)
             .success(function (data) {
+                spinnerService.hideSpinner();
                 if (data.message && data.message !== null && data.message.length > 0) {
                     if (callback)
                         callback(data);

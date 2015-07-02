@@ -1,5 +1,7 @@
 starter.controller('signinCtrl', function ($scope, $http, $state, $window, $rootScope, alertService, ngFB, facebookService, httpService) {
-
+    
+    $scope.user = {};
+    
     // Defaults to sessionStorage for storing the Facebook token
     ngFB.init({
         appId: '1453333228291598'

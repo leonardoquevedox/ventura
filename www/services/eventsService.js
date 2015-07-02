@@ -1,4 +1,4 @@
-	starter.service('eventsService', function ($http, spinnerService, $rootScope, alertService, storageService) {
+	starter.service('eventsService', function ($http, spinnerService, $rootScope, alertService, storageService, constantsService) {
 
 	    var _self = this;
 
@@ -29,9 +29,8 @@
 	        var params = {
 	            eventId: eventId
 	        }
-	        var SERVER_URL = 'http://venturalimaoserver-venturalimao.rhcloud.com';
 	        spinnerService.showSpinner();
-	        $http.post(SERVER_URL + '/event/details', params)
+	        $http.post(constantsService.SERVER_ADDRESS + '/event/details', params)
 	            .then(function (response) {
 	                    var eventDetails = response.data.event;
 	                    spinnerService.hideSpinner();
@@ -44,10 +43,8 @@
 	    }
 
 	    this.getEventsList = function ($scope, callback) {
-
-	        var SERVER_URL = 'http://venturalimaoserver-venturalimao.rhcloud.com';
 	        spinnerService.showSpinner();
-	        $http.get(SERVER_URL + '/events/list')
+	        $http.get(constantsService.SERVER_ADDRESS + '/events/list')
 	            .then(function (response) {
 	                    var eventsList = response.data.events;
 	                    $rootScope.events = eventsList;
