@@ -15,12 +15,12 @@ starter.controller('eventsMapCtrl', function($scope, $http, $state, $window, $ro
     mapsService.instanceMap();
     //Gets the user coordinates in order to search for the nearest bakeries around.
     mapsService.getUserLocation($rootScope.map, function(pos){
-      eventsService.getEventsList($scope, function(){
+      eventsService.getCurrentlyGoingEvents($scope, function(){
         //If map has been loaded, the gps timeout function must not show anything.
         $rootScope.mapHasLoaded = true;
 
       //In case user is logged in, the app must first get its favourite bakeries in order to render the markers with the bookmarked icon.
-      mapsService.setEventsMarkers($rootScope.events, pos, $rootScope);
+      mapsService.setEventsMarkers($rootScope.currentlyGoingEvents, pos, $rootScope);
 
       $rootScope.map.setCenter(pos);
       var centerControlDiv = document.createElement('div');

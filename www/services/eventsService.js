@@ -2,6 +2,70 @@
 
 	    var _self = this;
 
+	    this.getEventsList = function ($scope, callback) {
+	        spinnerService.showSpinner();
+	        $http.get(constantsService.SERVER_ADDRESS + '/events/list')
+	            .then(function (response) {
+	                    var eventsList = response.data.events;
+	                    $rootScope.events = eventsList;
+	                    spinnerService.hideSpinner();
+	                    if (callback)
+	                        callback(eventsList);
+	                },
+	                function (error) {
+	                    console.log(error);
+	                })
+	    }
+
+	    this.getCurrentlyGoingEvents = function ($scope, callback) {
+	        spinnerService.showSpinner();
+	        $rootScope.currentlyGoingEvents = [];
+	        var tomorrow = new Date(new Date().addDays(1).toDateString());
+	        var today = new Date();
+
+	        $rootScope.events.forEach(function (event) {
+	            var eventDate = new Date(event.start_time);
+	            var eventHappensToday = eventDate > today && eventDate < tomorrow;
+
+	            if (eventHappensToday)
+	                $rootScope.currentlyGoingEvents.push(event);
+	        });
+
+	        spinnerService.hideSpinner();
+
+	        if (callback)
+	            callback();
+	    }
+
+	    this.getEventDetails = function (eventId, callback) {
+	        spinnerService.showSpinner();
+
+	        var params = {
+	            eventId: eventId
+	        }
+	        var eventPositionOnEventsArray = $rootScope.events.indexOfObject("id", eventId);
+	        var eventInfo = $rootScope.events[eventPositionOnEventsArray];
+	        if (angular.isDefined(eventInfo))
+	            eventInfo.formatedTime = new Date(eventInfo.start_time).toTimeString().substring(0, 5);
+
+	        setTimeout(function () {
+	            spinnerService.hideSpinner();
+	        }, 200)
+
+	        callback(eventInfo);
+	        //	        spinnerService.showSpinner();
+	        //	        $http.post(constantsService.SERVER_ADDRESS + '/event/details', params)
+	        //	            .then(function (response) {
+	        //	                    var eventDetails = response.data.event;
+	        //	                    spinnerService.hideSpinner();
+	        //	                    if (callback)
+	        //	                        callback(eventDetails);
+	        //	                },
+	        //	                function (error) {
+	        //	                    console.log(error);
+	        //	                })
+	    }
+
 	    this.searchForEventByName = function (keyword, callback) {
 	        spinnerService.showSpinner();
 	        var queryPath = "/search";
@@ -23,38 +87,6 @@
 	                console.log(error);
 	            }
 	        });
-	    }
-
-	    this.getEventDetails = function (eventId, callback) {
-	        var params = {
-	            eventId: eventId
-	        }
-	        spinnerService.showSpinner();
-	        $http.post(constantsService.SERVER_ADDRESS + '/event/details', params)
-	            .then(function (response) {
-	                    var eventDetails = response.data.event;
-	                    spinnerService.hideSpinner();
-	                    if (callback)
-	                        callback(eventDetails);
-	                },
-	                function (error) {
-	                    console.log(error);
-	                })
-	    }
-
-	    this.getEventsList = function ($scope, callback) {
-	        spinnerService.showSpinner();
-	        $http.get(constantsService.SERVER_ADDRESS + '/events/list')
-	            .then(function (response) {
-	                    var eventsList = response.data.events;
-	                    $rootScope.events = eventsList;
-	                    spinnerService.hideSpinner();
-	                    if (callback)
-	                        callback(eventsList);
-	                },
-	                function (error) {
-	                    console.log(error);
-	                })
 	    }
 
 	})

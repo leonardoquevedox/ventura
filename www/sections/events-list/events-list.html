@@ -1,35 +1,38 @@
- <ion-pane>
- <ion-header-bar class="bar-stable bar-balanced">
- <h1 class="title">{{eventsType}}</h1>
-</ion-header-bar>
+<ion-pane>
+    <ion-header-bar class="bar-stable bar-balanced">
+        <h1 class="title">{{eventsType}}</h1>
+    </ion-header-bar>
 
-<ion-content class="has-header has-footer">
-<!-- Search bar -->
-<div class="item-input-inset item-balanced">
-  <label class="item-input-wrapper">
-    <input type="text" placeholder="Filtre pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;" ng-model="keyword">
-  </label>
-<!--   <button class="button button-small button-balanced" ng-model="search.name" ng-click="getEvents()">
+    <div class="bar bar-header item-input-inset" style="top: 44px;">
+        <!-- Search bar -->
+        <div class="item-input-inset item-balanced" style="width: 100%;">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="Filtre pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;" ng-model="keyword">
+            </label>
+            <!--   <button class="button button-small button-balanced" ng-model="search.name" ng-click="getEvents()">
     Encontrar!
   </button> -->
-</div>
-<div class="list">
-  <a class="item item-thumbnail-left" href="#" ng-repeat="event in events | orderBy:'-date':true | filter: keyword" ng-click="redirectToEventDetails(event.id)" ng-if="event.name">
-    <img src="img/event_icon.png" style="width: 200px; height: 159px; margin-top: 10px;">
-    <h2 class="event-title">{{::event.name}}</h2>
-    <p class="event-description" ng-if="event.formatedDate">
-      <i class="pink-font ion-ios-calendar-outline"></i> {{::event.formatedDate}}
-    </p>
-    <p class="event-description" ng-if="event.place.location.city">
-      <i class="pink-font ion-ios-location"></i> {{::event.place.location.city}}
-    </p>
-    <p class="event-description"> {{::event.place.name}}</p>
-    <p class="event-description">{{::event.place.location.street}}</p>
-  </a>
-</div>
+        </div>
+    </div>
 
-</ion-content>
-<!-- Footer -->
-<div ng-include="'sections/components/footer.html'"></div>
+    <ion-content class="has-header has-footer" style="top: 87px;">
+        <div class="list">
+            <a class="item item-thumbnail-left" href="#" ng-repeat="event in events | orderBy:'-date':true | filter: keyword" ng-click="redirectToEventDetails(event.id)" ng-if="event.name">
+                <img src="img/event_icon.png" style="width: 200px; height: 159px; margin-top: 10px;">
+                <h2 class="event-title">{{::event.name}}</h2>
+                <p class="event-description" ng-if="event.formatedDate">
+                    <i class="pink-font ion-ios-calendar-outline"></i> {{::event.formatedDate}}
+                </p>
+                <p class="event-description" ng-if="event.place.location.city">
+                    <i class="pink-font ion-ios-location"></i> {{::event.place.location.city}}
+                </p>
+                <p class="event-description"> {{::event.place.name}}</p>
+                <p class="event-description">{{::event.place.location.street}}</p>
+            </a>
+        </div>
+
+    </ion-content>
+    <!-- Footer -->
+    <div ng-include="'sections/components/footer.html'"></div>
 
 </ion-pane>
