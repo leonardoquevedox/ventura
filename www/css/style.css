@@ -1,233 +1,245 @@
 /* Empty. Add your own CSS if you like */
 
 #map-canvas {
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-	bottom: 6px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    bottom: 6px;
 }
 
-.scroll{
-	height: 100%;
+.scroll {
+    height: 100%;
 }
 
-.target-button{
-	border-radius: 5px;
-	color: #4F92FF;
-	bottom: 0px;
+.target-button {
+    border-radius: 5px;
+    color: #4F92FF;
+    bottom: 0px;
 }
-
 /*Ionic Customization*/
 
-.loading{
-	background-color: rgba(0,0,0,0.0) !important;
+.loading {
+    background-color: rgba(0, 0, 0, 0.0) !important;
 }
 
-.item-thumbnail-left{
-	min-height: 133px;
+.item-thumbnail-left {
+    min-height: 133px;
 }
-
 /* Ionic Spinner */
+
 .spinner svg {
-	width: 50px;
-	height: 50px;
-	stroke: #ED4565;;
-	fill: #FF0131;;
+    width: 50px;
+    height: 50px;
+    stroke: #ED4565;
+    ;
+    fill: #FF0131;
+    ;
 }
-
 /* Ionic Alert */
-.popup-head{
-	background-color: #F00C40;
-	text-align: center;
-	border-radius: 2px 2px 0px 0px;
+
+.popup-head {
+    background-color: #F00C40;
+    text-align: center;
+    border-radius: 2px 2px 0px 0px;
 }
 
-.popup-title{
-	color: #FFF;
-	font-size: 16px;
-	font-weight: bold;
+.popup-title {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.popup-container .popup{
-	border-radius: 2px;
+.popup-container .popup {
+    border-radius: 2px;
 }
 
-.popup-body{
-	text-align: center;
-	color: #FF0131;
-	font-weight: bold;
+.popup-body {
+    text-align: center;
+    color: #FF0131;
+    font-weight: bold;
 }
 
-.item-input-wrapper{
-	background: #fff;
+.item-input-wrapper {
+    background: #fff;
 }
 
-.item-gray{
-	background-color: #E9E5DC;
-	padding: 5px 5px 10px 5px;
+.item-gray {
+    background-color: #E9E5DC;
+    padding: 5px 5px 10px 5px;
 }
 
 .tabs-icon-top.tabs .tab-item {
-	color: white;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.button-big{
-	border-radius: 50px;
-	font-size: 35px;
-	padding: 3px;
+.button-big {
+    border-radius: 50px;
+    font-size: 35px;
+    padding: 3px;
 }
 
-input{
-	text-align: center;
-	margin: 5px;
+input {
+    text-align: center;
+    margin: 5px;
 }
 
-.list{
-	margin-bottom: 0px;
+.list {
+    margin-bottom: 0px;
 }
 
-.button.button-block{
-	margin-top: 5px;
+.button.button-block {
+    margin-top: 5px;
 }
 
-
-input[type="text"]{
-	color: #F00C40;
+input[type="text"] {
+    color: #F00C40;
 }
 
-input[type="password"]{
-	color: #F00C40;
+input[type="password"] {
+    color: #F00C40;
 }
 
-.button-pink:hover{
-	color: white;
+.button-pink:hover {
+    color: white;
 }
 
-.city-background{
-	/*background-color: #F00C40;*/
-	background: url('../img/city-wallpaper.jpg');
-	background-position: 1445px;
+.city-background {
+    /*background-color: #F00C40;*/
+    
+    background: url('../img/city-wallpaper.jpg');
+    background-position: 1445px;
 }
 
-.yellow-font{
-	color: #FFF;
-	font-weight: 300;
+.yellow-font {
+    color: #FFF;
+    font-weight: 300;
 }
 
-.transparent-background{
-	background-color: rgba(0,0,0,0);
+.transparent-background {
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.credentials-button{
-	padding: 10px;
-	margin: 2px;
-	margin-top: 0px;
+.credentials-button {
+    padding: 10px;
+    margin: 2px;
+    margin-top: 0px;
 }
 
-.button.button-social{
-	background-color: white;
-	border-radius: 50px;
-	width: 40px;
-	height: 40px;
-	min-height: 40px;
-	min-width: 40px;
-	padding: 0px;
-	color: #E91E63;
-	margin-left: 10px;
-	margin-right: 10px;
+.button.button-social {
+    background-color: white;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    padding: 0px;
+    color: #E91E63;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.transparent-white-layer{
-	background-color: #DB2C54;
-	border-radius: 3px;
+.transparent-white-layer {
+    background-color: #DB2C54;
+    border-radius: 3px;
 }
 
-.with-shadows{
-	-webkit-box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
-	-moz-box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
-	box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
+.with-shadows {
+    -webkit-box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
+    -moz-box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
+    box-shadow: 0px 5px 14px 0px rgba(152, 17, 17, 0.2);
 }
 
-.content-box{
-	padding: 10px;
+.content-box {
+    padding: 10px;
 }
 
-.event-title{
-	font-weight: bold!important;
-	color: #F01B4C;
+.event-title {
+    font-weight: bold!important;
+    color: #F01B4C;
 }
 
-.event-description{
-	color: #77515A!important;
+.event-description {
+    color: #77515A!important;
 }
 
-.event-details-description{
-	font-size: 12px;
-	color: #FF0044;
+.event-details-description {
+    font-size: 12px;
+    color: #FF0044;
 }
 
-.facebook-label{
-	margin-right: 25px;
+.facebook-label {
+    margin-right: 25px;
 }
 
-.blue-facebook-button{
-	background-color: rgba(58, 87, 149, 0.9);
-	color: #FFF;
-	/*border: 1px solid #133783;*/
+.blue-facebook-button {
+    background-color: rgba(58, 87, 149, 0.9);
+    color: #FFF;
+    /*border: 1px solid #133783;*/
 }
 
-.pink-font{
-	color: #ED4565;
+.pink-font {
+    color: #ED4565;
 }
 
-.button-pink{
-	background-color: rgba(245, 9, 54, 0.9);
-	color: white;
-	border: 1px solid rgba(255, 221, 229, 0.06);
+.button-pink {
+    background-color: rgba(245, 9, 54, 0.9);
+    color: white;
+    border: 1px solid rgba(255, 221, 229, 0.06);
 }
 
-.link{
-	color: #F00C40;
+.link {
+    color: #F00C40;
 }
 
-.half-width{
-	width: 48%;
-	text-align: justify;
+.half-width {
+    width: 48%;
+    text-align: justify;
 }
 
-.banner{
-	text-align: center;
-	height: 180px;
-	width: 100%;
-	background-position: center;
+.banner {
+    text-align: center;
+    height: 180px;
+    width: 100%;
+    background-position: center;
 }
 
-.description-question{
-	color: #F00C40;
-	font-weight: bold;
-	font-size: 14px;
-	text-align: center;
+.description-question {
+    color: #F00C40;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
 }
 
-.description-answer{
-	text-align: center;
+.description-answer {
+    text-align: center;
 }
 
-
-.friend{
-	width: 20%;
-	max-height: 70px;
-	float: left;
-	margin: 5px;
-	min-width: 50px;
+.friend {
+    width: 20%;
+    max-height: 70px;
+    float: left;
+    margin: 5px;
+    min-width: 50px;
 }
 
-.friend-avatar{
-	border-radius: 4px;
+.friend-avatar {
+    border-radius: 4px;
 }
 
-.about-text{
-	padding: 15px;
-	color: #F00C40;
-	text-align: justify;
+.about-text {
+    padding: 15px;
+    color: #F00C40;
+    text-align: justify;
+}
+
+.white-icon {
+    color: #FFF !important;
+}
+
+.item{
+    border-color: #F7F7F7;
+}
+
+.bar .title.title-left{
+    text-align: center;
 }

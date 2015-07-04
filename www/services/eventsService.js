@@ -21,7 +21,7 @@
 	        spinnerService.showSpinner();
 	        $rootScope.currentlyGoingEvents = [];
 	        var tomorrow = new Date(new Date().addDays(1).toDateString());
-	        var today = new Date();
+	        var today = new Date().removeHours(1);
 
 	        $rootScope.events.forEach(function (event) {
 	            var eventDate = new Date(event.start_time);

@@ -1,5 +1,8 @@
 
 starter.controller('eventDetailsCtrl', function($scope, $http, $rootScope, $stateParams, eventsService) {
+    
+    $scope.currentView = 'EVENTS';
+    
 	$scope.SHORT_TEXT = 300;
 	$scope.LARGE_TEXT = 9999;
 

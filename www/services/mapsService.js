@@ -8,7 +8,7 @@ starter.service('mapsService', function ($rootScope, $http, spinnerService, aler
 
             var mapOptions = {
                 disableDefaultUI: true,
-                zoom: 9,
+                zoom: 10,
                 panControl: false,
                 zoomControl: false,
                 mapTypeControl: false,
@@ -49,7 +49,7 @@ starter.service('mapsService', function ($rootScope, $http, spinnerService, aler
             // Setup the click event listeners: simply set the map to
             // Chicago
             google.maps.event.addDomListener(controlUI, 'click', function () {
-                map.setZoom(16);
+                map.setZoom(10);
                 map.panTo(myLocationPosition);
             });
 
@@ -60,8 +60,8 @@ starter.service('mapsService', function ($rootScope, $http, spinnerService, aler
         this.getUserLocation = function (map, callback) {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    // var pos = new google.maps.LatLng(position.coords.latitude,  position.coords.longitude);
-                    var pos = new google.maps.LatLng(-30.041778, -51.220882);
+                    var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                    //                    var pos = new google.maps.LatLng(-30.041778, -51.220882);
 
                     $rootScope.userCoordinates = pos;
 
@@ -161,6 +161,10 @@ starter.service('mapsService', function ($rootScope, $http, spinnerService, aler
                 google.maps.event.addListener(marker, 'click', function () {
                     infowindow.open($rootScope.map, marker);
                 });
+
+                event.googleMapsMarker = marker;
+                event.infoWindow = infowindow;
+
             } else {
                 marker = new google.maps.Marker({
                     map: map,
@@ -170,10 +174,6 @@ starter.service('mapsService', function ($rootScope, $http, spinnerService, aler
                     title: 'Sua localização'
                 });
 
-            }
-
-            if (event) {
-                event.googleMapsMarker = marker;
             }
         },
 

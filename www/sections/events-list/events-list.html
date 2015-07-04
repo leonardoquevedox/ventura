@@ -1,17 +1,15 @@
 <ion-pane>
     <ion-header-bar class="bar-stable bar-balanced">
-        <h1 class="title">{{eventsType}}</h1>
+        <button class="button button button-icon icon ion-ios-arrow-left" ng-click="goBack()" ng-if="hasViewToReturn()"></button>
+        <h1 class="title">Ventura Limão</h1>
     </ion-header-bar>
 
-    <div class="bar bar-header item-input-inset" style="top: 44px;">
+    <div class="bar bar-header item-input-inset" style="top: 44px; border-color: #FEF; height: 50px;">
         <!-- Search bar -->
         <div class="item-input-inset item-balanced" style="width: 100%;">
             <label class="item-input-wrapper">
                 <input type="text" placeholder="Filtre pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;" ng-model="keyword">
             </label>
-            <!--   <button class="button button-small button-balanced" ng-model="search.name" ng-click="getEvents()">
-    Encontrar!
-  </button> -->
         </div>
     </div>
 

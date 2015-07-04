@@ -1,6 +1,8 @@
 
 starter.controller('eventsListCtrl', function($scope, $http, $rootScope, eventsService) {
-	$scope.eventsType = 'Eventos';
+    
+	$scope.currentView = 'EVENTS';
+    
 	$scope.keyword = '';
 
 	$scope.$on('$ionicView.enter', function() {

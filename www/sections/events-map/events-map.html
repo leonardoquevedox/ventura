@@ -1,21 +1,24 @@
- <ion-pane>
- <ion-header-bar class="bar-stable bar-balanced">
- <h1 class="title">{{eventsType}}</h1>
-</ion-header-bar>
+<ion-pane>
+    <ion-header-bar class="bar-stable bar-balanced">
+        <button class="button button button-icon icon ion-ios-arrow-left" ng-click="goBack()" ng-if="hasViewToReturn()"></button>
+        <h1 class="title">{{eventsType}}</h1>
+    </ion-header-bar>
 
-<ion-content class="has-header has-footer">
-<!-- Search bar -->
-<div class="item-input-inset item-gray">
-	<label class="item-input-wrapper">
-		<input type="search" placeholder="Pesquise pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;">
-	</label>
-</div>
-<div id="map-canvas" data-tap-disabled="true">
-</div>
+    <ion-content class="has-header has-footer">
+        <!-- Search bar -->
+        <!--
+        <div class="item-input-inset item-gray">
+            <label class="item-input-wrapper">
+                <input type="search" placeholder="Pesquise pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;">
+            </label>
+        </div>
+-->
 
-</ion-content>
-<!-- Footer -->
-<div ng-include="'sections/components/footer.html'"></div>
+        <div id="map-canvas" data-tap-disabled="true">
+        </div>
 
+    </ion-content>
+    <!-- Footer -->
+    <div ng-include="'sections/components/footer.html'"></div>
 
 </ion-pane>

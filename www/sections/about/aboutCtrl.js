@@ -1,6 +1,6 @@
+starter.controller('aboutCtrl', function ($scope, $http, $rootScope, eventsService) {
 
-starter.controller('aboutCtrl', function($scope, $http, $rootScope, eventsService) {
-	
-	$scope.eventsType = 'Eventos';
+    $scope.eventsType = 'Eventos';
+    $scope.currentView = 'ABOUT';
 
 })
