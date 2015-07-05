@@ -17,6 +17,7 @@ starter.controller('eventDetailsCtrl', function($scope, $http, $rootScope, $stat
 	$scope.$on('$ionicView.enter', function() {
 		var eventId = $stateParams.id;
 		eventsService.getEventDetails(eventId, function(eventInfo){
+            console.log(eventInfo);
 			$scope.textLength = $scope.SHORT_TEXT;
 			$scope.event = eventInfo;
 		});

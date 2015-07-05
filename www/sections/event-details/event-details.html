@@ -9,11 +9,10 @@
         </div>
 
         <div class="content-box">
-
             <!-- Event title -->
             <h4 class="event-title" style="text-align: center;">
-		{{event.name}}
-	</h4>
+                {{event.name}}
+            </h4>
 
             <!-- Event description -->
             <div class="event-details-description" style="border-right: 1px solid #efefef; padding-right: 10px; text-align: justify;">
@@ -48,6 +47,14 @@
                         <div ng-if="event.place.name && !event.place.location.street">
                             <i class="pink-font ion-ios-location"></i> {{ ::event.place.name }}
                         </div>
+                    </div>
+                </div>
+
+                <!-- Event date -->
+                <div ng-if="event.weather.currently.summary">
+                    <div class="description-question">E o tempo?</div>
+                    <div class="description-answer">
+                        <i class="pink-font ion-ios-calendar-outline"></i> Estará {{event.weather.currently.summary}}.
                     </div>
                 </div>
             </div>

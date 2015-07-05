@@ -14,6 +14,8 @@
 	                },
 	                function (error) {
 	                    console.log(error);
+	                    alertService.alert('Falha no servidor! Por favor, tente novamente mais tarde.');
+	                    spinnerService.hideSpinner();
 	                })
 	    }
 
