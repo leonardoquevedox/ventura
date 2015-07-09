@@ -19,7 +19,11 @@
     "org.apache.cordova.console",
     "com.ionic.keyboard",
     "org.apache.cordova.inappbrowser",
-    "org.apache.cordova.geolocation"
+    "org.apache.cordova.geolocation",
+    {
+      "locator": "https://github.com/whiteoctober/cordova-plugin-app-version.git",
+      "id": "uk.co.whiteoctober.cordova.appversion"
+    }
   ],
   "cordovaPlatforms": [
     "android",

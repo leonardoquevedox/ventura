@@ -30,9 +30,11 @@
     // angular.module is a global place for creating, registering and retrieving Angular modules
     // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
     // the 2nd parameter is an array of 'requires'
-    var starter = angular.module('starter', ['starter.controllers', 'ionic', 'ngOpenFB'])
+    var starter = angular.module('starter', ['starter.controllers', 'ionic', 'ngOpenFB', 'starter.directives'])
     angular.module('starter.services', [])
     angular.module('starter.controllers', [])
+    angular.module('starter.directives', [])
+
 
     starter.run(function ($ionicPlatform, $rootScope, $ionicHistory) {
 
@@ -67,6 +69,14 @@
         }
 
         $ionicPlatform.ready(function () {
+            
+            // Sets the app build version
+            if (cordova && cordova.getAppVersion) {
+                cordova.getAppVersion.getVersionNumber().then(function (version) {
+                    $rootScope.buildVersion = version;
+                });
+            }
+
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
             if (window.cordova && window.cordova.plugins.Keyboard) {

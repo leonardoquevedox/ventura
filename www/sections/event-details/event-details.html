@@ -13,6 +13,13 @@
             <h4 class="event-title" style="text-align: center;">
                 {{event.name}}
             </h4>
+            <div style="color: #FDC727; float: right; padding: 10px; text-align: center;">
+                <weather-icon icon="event.weather.currently.icon" style="font-size: 100px;"></weather-icon>
+                <br>
+                <div style="margin-top: -10px;">
+                    {{event.weather.currently.summary}}.
+                </div>
+            </div>
 
             <!-- Event description -->
             <div class="event-details-description" style="border-right: 1px solid #efefef; padding-right: 10px; text-align: justify;">
@@ -21,6 +28,8 @@
                 <a href="" ng-click="readMore()" ng-if="textLength === SHORT_TEXT && event.description.length > 300" class="event-description">...ler mais</a>
                 <!-- <a href="" ng-click="readLess()" ng-if="textLength === LARGE_TEXT" class="event-description">read less</a> -->
             </div>
+
+
             <!-- Event general info -->
             <div class="event-details-description">
 
@@ -32,7 +41,6 @@
                         <p ng-if="event.formatedTime" style="display: inline;"> - às {{event.formatedTime}}</p>.
                     </div>
                 </div>
-
 
                 <!-- Event place -->
                 <div ng-if="event.formatedDate" div ng-if="event.place.location.street || event.place.name">
@@ -49,18 +57,14 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Event date -->
-                <div ng-if="event.weather.currently.summary">
-                    <div class="description-question">E o tempo?</div>
-                    <div class="description-answer">
-                        <i class="pink-font ion-ios-calendar-outline"></i> Estará {{event.weather.currently.summary}}.
-                    </div>
-                </div>
             </div>
-
+            <!--
+            <div ng-if="event.id" class="description-answer" style="margin-top: 10px; margin-right: 5px;">
+                <a href="http://www.facebook.com/events/{{event.id}}" target="_blank" class="pink-font" style="float: right;">Ver no Facebook</a>
+            </div>
+-->
+            <br>
         </div>
-
     </ion-content>
     <!-- Footer -->
     <div ng-include="'sections/components/footer.html'"></div>

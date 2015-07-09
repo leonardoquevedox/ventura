@@ -10,7 +10,7 @@ starter.service('mapsService', function ($rootScope, $http, spinnerService, aler
                 disableDefaultUI: true,
                 zoom: 10,
                 panControl: false,
-                zoomControl: false,
+                zoomControl: true,
                 mapTypeControl: false,
                 scaleControl: false,
                 streetViewControl: false,
@@ -139,7 +139,7 @@ starter.service('mapsService', function ($rootScope, $http, spinnerService, aler
         },
 
         this.getEventRedirectLink = function (event) {
-            var eventLink = event.name + '<br>' + '<a href="#/event-details/' + event.id + '">Ver detalhes do evento </a>';
+            var eventLink = event.name + '<br>' + '<a href="#/event-details/' + event.id + '" style="color:#F00C40">Ver detalhes do evento </a>';
             return eventLink;
         }
 
@@ -159,6 +159,7 @@ starter.service('mapsService', function ($rootScope, $http, spinnerService, aler
                 });
 
                 google.maps.event.addListener(marker, 'click', function () {
+                    $rootScope.map.setCenter(marker.position);
                     infowindow.open($rootScope.map, marker);
                 });
 

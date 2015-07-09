@@ -8,14 +8,14 @@
         <!-- Search bar -->
         <div class="item-input-inset item-balanced" style="width: 100%;">
             <label class="item-input-wrapper">
-                <input type="text" placeholder="Filtre pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;" ng-model="keyword">
+                <input type="text" placeholder="Filtre pelo nome do evento. Exemplo: Fantaspoa" style="width: 100%; text-align: center;" ng-model="keyword" ng-change="scrollTop()">
             </label>
         </div>
     </div>
 
     <ion-content class="has-header has-footer" style="top: 87px;">
-        <div class="list">
-            <a class="item item-thumbnail-left" href="#" ng-repeat="event in events | orderBy:'-date':true | filter: keyword" ng-click="redirectToEventDetails(event.id)" ng-if="event.name">
+        <div class="list" >
+            <a class="item item-thumbnail-left" href="#" ng-click="redirectToEventDetails(event.id)" ng-if="event.name" data-ng-repeat="event in events | orderBy:'-date':true | filter: keyword">
                 <img src="img/event_icon.png" style="width: 200px; height: 159px; margin-top: 10px;">
                 <h2 class="event-title">{{::event.name}}</h2>
                 <p class="event-description" ng-if="event.formatedDate">

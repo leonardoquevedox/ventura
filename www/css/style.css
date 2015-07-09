@@ -5,6 +5,7 @@
     margin: 0px;
     padding: 0px;
     bottom: 6px;
+    top: 0px;
 }
 
 .scroll {
@@ -31,9 +32,7 @@
     width: 50px;
     height: 50px;
     stroke: #ED4565;
-    ;
     fill: #FF0131;
-    ;
 }
 /* Ionic Alert */
 
@@ -151,6 +150,7 @@ input[type="password"] {
 
 .content-box {
     padding: 10px;
+    padding-bottom: 40px;
 }
 
 .event-title {
@@ -198,7 +198,7 @@ input[type="password"] {
 
 .banner {
     text-align: center;
-    height: 180px;
+    height: 150px;
     width: 100%;
     background-position: center;
 }
@@ -212,6 +212,8 @@ input[type="password"] {
 
 .description-answer {
     text-align: center;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .friend {
@@ -230,16 +232,17 @@ input[type="password"] {
     padding: 15px;
     color: #F00C40;
     text-align: justify;
+    line-height: 20px;
 }
 
 .white-icon {
     color: #FFF !important;
 }
 
-.item{
+.item {
     border-color: #F7F7F7;
 }
 
-.bar .title.title-left{
+.bar .title.title-left {
     text-align: center;
 }
