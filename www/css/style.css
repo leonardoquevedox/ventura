@@ -1,5 +1,13 @@
 /* Empty. Add your own CSS if you like */
 
+a{
+    color: #19f;
+}
+
+.fake-link{
+    text-decoration: underline;
+}
+
 #map-canvas {
     height: 100%;
     margin: 0px;
@@ -17,6 +25,7 @@
     color: #4F92FF;
     bottom: 0px;
 }
+
 /*Ionic Customization*/
 
 .loading {

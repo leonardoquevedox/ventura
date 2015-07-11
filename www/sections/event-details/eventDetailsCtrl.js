@@ -3,11 +3,10 @@ starter.controller('eventDetailsCtrl', function ($scope, $http, $rootScope, $sta
     $scope.currentView = 'EVENTS';
 
     $scope.SHORT_TEXT = 300;
-    $scope.LARGE_TEXT = 9999;
 
-    $scope.readMore = function () {
+    $scope.readMore = function (text) {
 
-        $scope.textLength = $scope.LARGE_TEXT;
+        $scope.textLength = text.length;
         spinnerService.showSpinner();
 
         window.setTimeout(function () {

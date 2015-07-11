@@ -69,7 +69,11 @@
         }
 
         $ionicPlatform.ready(function () {
-            
+
+            if (cordova.platformId == 'android') {
+                StatusBar.backgroundColorByHexString("#0F0");
+            }
+
             // Sets the app build version
             if (cordova && cordova.getAppVersion) {
                 cordova.getAppVersion.getVersionNumber().then(function (version) {

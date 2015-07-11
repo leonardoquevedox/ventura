@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="br.com.venturalimao.mobile" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="br.com.venturalimao.mobile" version="0.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Ventura Limão</name>
   <description>
-    An Ionic Framework and Cordova project.
+    Seu refresco à rotina!
   </description>
   <author email="pac.leo@hotmail.com" href="http://www.venturalimao.com.br/">
-    Ionic Framework Team
+    Paranoid Frog Company
   </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -14,7 +14,7 @@
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="5000"/>
+  <preference name="SplashScreenDelay" value="7000"/>
   <preference name="Fullscreen" value="true"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
