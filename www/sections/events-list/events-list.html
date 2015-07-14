@@ -14,10 +14,11 @@
     </div>
 
     <ion-content class="has-header has-footer" style="top: 87px;">
-        <div class="list" >
+        <div class="list">
             <a class="item item-thumbnail-left" href="#" ng-click="redirectToEventDetails(event.id)" ng-if="event.name" data-ng-repeat="event in events | orderBy:'-date':true | filter: keyword">
                 <img src="img/event_icon.png" style="width: 200px; height: 159px; margin-top: 10px;">
-                <h2 class="event-title">{{::event.name}}</h2>
+
+                <h2 class="event-title">{{::event.formatedTime}}h - {{::event.name}}</h2>
                 <p class="event-description" ng-if="event.formatedDate">
                     <i class="pink-font ion-ios-calendar-outline"></i> {{::event.formatedDate}}
                 </p>

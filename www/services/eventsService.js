@@ -7,6 +7,9 @@
 	        $http.get(constantsService.SERVER_ADDRESS + '/events/list')
 	            .then(function (response) {
 	                    var eventsList = response.data.events;
+	                    eventsList.forEach(function (eventInfo) {
+	                        eventInfo.formatedTime = new Date(eventInfo.start_time).toTimeString().substring(0, 5);
+	                    })
 	                    $rootScope.events = eventsList;
 	                    spinnerService.hideSpinner();
 	                    if (callback)
@@ -47,8 +50,7 @@
 	        }
 	        var eventPositionOnEventsArray = $rootScope.events.indexOfObject("id", eventId);
 	        var eventInfo = $rootScope.events[eventPositionOnEventsArray];
-	        if (angular.isDefined(eventInfo))
-	            eventInfo.formatedTime = new Date(eventInfo.start_time).toTimeString().substring(0, 5);
+
 
 	        setTimeout(function () {
 	            spinnerService.hideSpinner();
